@@ -1,0 +1,355 @@
+/* ---------- Grunnleggende ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111821;
+  color: #dce3ea;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Consolas, Menlo, monospace;
+  margin: 0 0 15px;
+}
+
+a {
+  color: #dce3ea;
+  text-decoration-color: #f0b04a;
+}
+
+a:hover {
+  color: #f0b04a;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Lenke for tastaturbrukere, vises bare når man tabber til den */
+.skip {
+  position: absolute;
+  top: -50px;
+}
+
+.skip:focus {
+  top: 10px;
+  left: 10px;
+  background: #dce3ea;
+  color: #111821;
+  padding: 8px;
+}
+
+/* ---------- Menyen øverst ---------- */
+.topp {
+  position: sticky; /* blir liggende øverst når man scroller */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 30px;
+  background: #111821;
+  border-bottom: 1px solid #2c3847;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 15px;
+}
+
+.logo {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topp nav a {
+  margin-left: 20px;
+  color: #93a1b2;
+  text-decoration: none;
+}
+
+/* ---------- Seksjoner ---------- */
+section {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  border-top: 1px solid #2c3847;
+}
+
+.ingress {
+  color: #93a1b2;
+}
+
+/* ---------- Toppen av siden ---------- */
+.hero {
+  max-width: 1000px;
+  display: flex;
+  gap: 50px;
+  border-top: none;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: normal;
+}
+
+/* Den "terminal-aktige" boksen */
+.whois {
+  background: #19222e;
+  border: 1px solid #2c3847;
+  border-left: 4px solid #f0b04a;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 15px;
+}
+
+.prompt {
+  color: #93a1b2;
+  margin-top: 0;
+}
+
+/* Legger navn og verdi side om side, som en tabell */
+.whois dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  margin: 0;
+}
+
+.whois dt {
+  color: #f0b04a;
+}
+
+.whois dd {
+  margin: 0;
+}
+
+/* Den lille grønne "status-lampen" */
+.led {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #4fc79f;
+}
+
+/* Knapper */
+.knapp {
+  display: inline-block;
+  margin: 25px 10px 0 0;
+  padding: 10px 20px;
+  background: #dce3ea;
+  color: #111821;
+  border: 2px solid #dce3ea;
+  border-radius: 4px;
+  font-family: Consolas, Menlo, monospace;
+  text-decoration: none;
+}
+
+.knapp:hover {
+  background: #f0b04a;
+  border-color: #f0b04a;
+  color: #111821;
+}
+
+.knapp.sekundær {
+  background: none;
+  color: #dce3ea;
+}
+
+/* Bildet */
+.portrett {
+  width: 250px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0; /* hindrer at bildet blir klemt */
+}
+
+.plassholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #19222e;
+  border: 1px solid #2c3847;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 48px;
+  color: #2c3847;
+}
+
+/* ---------- Prosjekter ---------- */
+.prosjekt {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  border-left: 2px solid #2c3847;
+}
+
+.prosjekt:hover {
+  border-left-color: #f0b04a;
+}
+
+.prosjekt strong {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 15px;
+  color: #93a1b2;
+}
+
+/* Små "merkelapper" for teknologier */
+.tagger {
+  list-style: none;
+  padding: 0;
+}
+
+.tagger li {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 8px;
+  border: 1px solid #2c3847;
+  border-radius: 3px;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 13px;
+  color: #93a1b2;
+}
+
+/* ---------- Writeups ---------- */
+.writeups {
+  list-style: none;
+  padding: 0;
+}
+
+.writeups li {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #2c3847;
+}
+
+.writeups time,
+.plattform {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 14px;
+  color: #93a1b2;
+}
+
+.plattform {
+  margin-left: auto; /* skyver plattformnavnet helt til høyre */
+}
+
+/* ---------- Tidslinje ---------- */
+.tidslinje {
+  list-style: none;
+  padding: 0;
+  border-left: 2px solid #2c3847;
+}
+
+.tidslinje li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
+
+/* Prikken på streken */
+.tidslinje li::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #111821;
+  border: 2px solid #f0b04a;
+}
+
+.periode {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 14px;
+  color: #f0b04a;
+  margin: 0;
+}
+
+.sted {
+  color: #93a1b2;
+  font-style: italic;
+}
+
+/* ---------- Ferdigheter ---------- */
+.kolonner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.kolonner > div {
+  flex: 1;
+  min-width: 180px;
+}
+
+.enkel {
+  list-style: none;
+  padding: 0;
+}
+
+.enkel li {
+  padding: 5px 0;
+  border-bottom: 1px solid #2c3847;
+}
+
+/* ---------- Kontakt og bunn ---------- */
+.kontaktliste {
+  list-style: none;
+  padding: 0;
+  font-family: Consolas, Menlo, monospace;
+}
+
+.kontaktliste li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.bunn {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-top: 1px solid #2c3847;
+  font-size: 15px;
+  color: #93a1b2;
+}
+
+/* ---------- Mobil ---------- */
+/* Alt her gjelder bare når skjermen er smalere enn 700px */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column-reverse; /* bildet over teksten */
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .portrett {
+    width: 130px;
+    height: 160px;
+  }
+
+  .whois dl {
+    grid-template-columns: 1fr;
+  }
+
+  .topp nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .writeups li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .plattform {
+    margin-left: 0;
+  }
+}

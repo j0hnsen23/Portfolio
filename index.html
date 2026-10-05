@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicolai Gravdal Johnsen – Cybersikkerhet</title>
+    <meta name="description" content="Nicolai Gravdal Johnsen, student i cybersikkerhet. Prosjekter, writeups og CV.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip" href="#innhold">Hopp til innholdet</a>
+
+    <header class="topp">
+        <!-- FYLL INN: navnet ditt -->
+        <a class="logo" href="#">Nicolai Gravdal Johnsen</a>
+        <nav aria-label="Hovedmeny">
+            <a href="#om-meg">Om meg</a>
+            <a href="#prosjekter">Prosjekter</a>
+            <a href="#writeups">Writeups</a>
+            <a href="#erfaring">Erfaring</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <main id="innhold">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-tekst">
+                <!-- FYLL INN: én setning om hvem du er og hva du ser etter -->
+                <h1>Jeg studerer cybersikkerhet og liker å finne ut hvordan ting går i stykker – og hvordan man hindrer
+                    det.</h1>
+
+                <div class="whois" role="group" aria-label="Kort oversikt">
+                    <p class="prompt">$ whois nicolai-gravdal-johnsen</p>
+                    <dl>
+                        <dt>navn</dt>
+                        <dd>Nicolai Gravdal Johnsen</dd>
+                        <dt>studie</dt>
+                        <dd>Bachelor i digital infrastruktur og cybersikkerhet, 2. år</dd>
+                        <dt>sted</dt>
+                        <dd>Gjøvik, Norge</dd>
+                        <dt>interesser</dt>
+                        <dd>Nettverkssikkerhet, hendelseshåndtering</dd>
+                        <dt>søker</dt>
+                        <dd>Sommerjobb 2027 / Deltidsjobb</dd>
+                        <dt>status</dt>
+                        <dd><span class="led" aria-hidden="true"></span>Tilgjengelig for en prat</dd>
+                    </dl>
+                </div>
+
+                <p class="hero-knapper">
+                    <a class="knapp" href="#kontakt">Ta kontakt</a>
+                    <!-- Legg CV-en din i samme mappe som cv.pdf -->
+                    <a class="knapp sekundær" href="cv.pdf">Last ned CV (PDF)</a>
+                </p>
+            </div>
+
+
+            <img class="portrett" src="IMG_8709.jpg" alt="Portrett av Nicolai Gravdal Johnsen" width="320" height="400">
+
+        </section>
+
+        <!-- ============ OM MEG ============ -->
+        <section id="om-meg">
+            <h2>Om meg</h2>
+            <!-- FYLL INN: skriv som du snakker. Hvorfor sikkerhet? Hva driver deg? Hva gjør du utenom studiet? -->
+            <p>Jeg vokste opp i et hjem der begge foreldrene mine jobber med IT, så interessen kom tidlig. Det var
+                spesielt sikkerhetsbiten som fanget meg: hvordan systemer kan angripes, og hvordan man beskytter dem. Nå
+                går jeg andre året på cybersikkerhet.</p>
+
+            <p>Så langt har operativsystemer vært favorittfaget mitt. Det var overraskende hvor mye som skjer bak kulisene som jeg aldri hadde tenkt over, og det har gjort meg enda mer motivert til å forstå systemer i
+                dybden. Jeg vet ikke helt hvor jeg ender ennå, men skysikkerhet frister. Utenom studiet deltar jeg på
+                CTF-er og jobber med egne småprosjekter når jeg får tid.</p>
+
+            <p>Medstudenter vil nok beskrive meg som hjelpsom og lett å samarbeide med. Jeg liker å dele det jeg lærer
+                og løse problemer sammen med andre. På fritiden er jeg mye på sykkelen og i treningsstudioet, og følger
+                med på det meste av sport, fra langrenn og skiskyting til Formel 1 og rally. Litt gaming blir det også.</p>
+        </section>
+
+        <!-- ============ PROSJEKTER ============ -->
+        <section id="prosjekter">
+            <h2>Prosjekter</h2>
+            <p class="ingress">Ting jeg har bygget og satt opp.</p>
+
+            <!-- Kopier en hel <article> for hvert prosjekt. 2–4 gode prosjekter er bedre enn mange. -->
+            <article class="prosjekt">
+                <h3>Formel 1 Simulator i C++</h3>
+                <ul class="tagger" aria-label="Teknologier">
+                    <li>C++</li>
+                    <li>Objektorientert programmering</li>
+                    <li>Terminal</li>
+                </ul>
+                <p><strong>Hva:</strong> En simulator for Formel 1-løp, skrevet i C++.</p>
+                <p><strong>Lærte:</strong> Lærte om objektorientert programmering i denne perioden, så ble en del
+                    prøving og feiling underveis mens jeg opprettet simulatoren.</p>
+                <p class="lenker"><a href="https://github.com/j0hnsen23/F1_Project">Kode på GitHub</a></p>
+            </article>
+        </section>
+
+        <!-- ============ WRITEUPS ============ -->
+        <section id="writeups">
+            <h2>Writeups</h2>
+            <p class="ingress">Gjennomganger av CTF-oppgaver og øvingsmaskiner. Kun lovlige plattformer og pensjonerte
+                maskiner.</p>
+
+            <!-- Hver <li> er ett innlegg. Lenk til en egen side, f.eks. writeups/navn.html -->
+            <ol class="writeups">
+                <li>
+                    <time datetime="2026-09">sep. 2026</time>
+                    <a href="https://github.com/j0hnsen23/CTF-WriteUps/blob/main/CRYPTO/Reverse_Engineer.md">Reverse
+                        Engineer</a>
+                    <span class="plattform">Login CTF</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ ERFARING OG UTDANNING ============ -->
+        <section id="erfaring">
+            <h2>Erfaring og utdanning</h2>
+
+            <!-- Nyeste øverst. Ta gjerne med frivillig arbeid, verv og deltidsjobber. -->
+            <ol class="tidslinje">
+                <li>
+                    <p class="periode">2025 – nå</p>
+                    <h3>Bachelor i cybersikkerhet</h3>
+                    <p class="sted">Norges teknisk naturvitenskapelige Universitet</p>
+                    <p>Operativ systemer, Sammenkoblede nettverk og nettverkssikkerhet, Programvareutvikling, C og C++
+                    </p>
+                </li>
+                <li>
+                    <p class="periode">September 2026 – nå</p>
+                    <h3>Verv i studentforening</h3>
+                    <p class="sted">Norges teknisk naturvitenskapelige Universitet</p>
+                    <p>Ansvar for påfylling av varer til 'USB' studentkiosk</p>
+                </li>
+                <li>
+                    <p class="periode">August 2026 – Desember 2026</p>
+                    <h3>Deltidsjobb</h3>
+                    <p class="sted">Norges teknisk naturvitenskapelige Universitet</p>
+                    <p>Læringsassistent i matematikk for informatikk BMA1010</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ FERDIGHETER ============ -->
+        <section id="ferdigheter">
+            <h2>Ferdigheter og sertifiseringer</h2>
+            <div class="kolonner">
+                <div>
+                    <h3>Teknisk</h3>
+                    <ul class="enkel">
+                        <li>Linux og Bash</li>
+                        <li>C og C++</li>
+                        <li>Nettverk (TCP/IP, Wireshark)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Sertifiseringer</h3>
+                    <ul class="enkel">
+                        <!-- Skriv "pågår" for det du jobber mot -->
+                        <li>Sertifisering MÅ FIKSES</li>
+                        <li>Sertifisering (pågår)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Språk</h3>
+                    <ul class="enkel">
+                        <li>Norsk – morsmål</li>
+                        <li>Engelsk – flytende</li>
+                        <li>Spansk – grunnleggende</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ KONTAKT ============ -->
+        <section id="kontakt" class="kontakt">
+            <h2>Kontakt</h2>
+            <p>Jeg ser etter sommerjobb og deltidsstilling. Send meg gjerne en e-post</p>
+            <!-- FYLL INN: dine egne lenker. Ikke legg ut adresse eller telefonnummer. -->
+            <ul class="kontaktliste">
+                <li><a href="mailto:j0hnsen@proton.me">Mail</a></li>
+                <li><a href="https://www.linkedin.com/in/nicolai-gravdal-johnsen">LinkedIn</a></li>
+                <li><a href="https://github.com/j0hnsen23">GitHub</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="bunn">
+        <p>© Nicolai Gravdal Johnsen 2026</p>
+    </footer>
+
+</body>
+
+</html>
