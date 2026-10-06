@@ -46,7 +46,7 @@ img {
 
 /* ---------- Menyen øverst ---------- */
 .topp {
-  position: sticky; /* blir liggende øverst når man scroller */
+  position: sticky; 
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -95,7 +95,7 @@ section {
   font-weight: normal;
 }
 
-/* Den "terminal-aktige" boksen */
+/* Den første boksen */
 .whois {
   background: #19222e;
   border: 1px solid #2c3847;
@@ -126,7 +126,7 @@ section {
   margin: 0;
 }
 
-/* Den lille grønne "status-lampen" */
+/* Det lille grønne "status-lyset" */
 .led {
   display: inline-block;
   width: 10px;
@@ -235,7 +235,7 @@ section {
 }
 
 .plattform {
-  margin-left: auto; /* skyver plattformnavnet helt til høyre */
+  margin-left: auto;
 }
 
 /* ---------- Tidslinje ---------- */
@@ -275,6 +275,22 @@ section {
   color: #93a1b2;
   font-style: italic;
 }
+
+.deloverskrift {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #2c3847;
+  color: #f0b04a;
+  font-size: 16px;
+}
+
+.deloverskrift:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* ---------- Ferdigheter ---------- */
 
 /* ---------- Ferdigheter ---------- */
 .kolonner {
@@ -317,6 +333,7 @@ section {
   border-top: 1px solid #2c3847;
   font-size: 15px;
   color: #93a1b2;
+  text-align: center;
 }
 
 /* ---------- Mobil ---------- */
