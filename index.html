@@ -14,7 +14,6 @@
     <a class="skip" href="#innhold">Hopp til innholdet</a>
 
     <header class="topp">
-        <!-- FYLL INN: navnet ditt -->
         <a class="logo" href="#">Nicolai Gravdal Johnsen</a>
         <nav aria-label="Hovedmeny">
             <a href="#om-meg">Om meg</a>
@@ -30,30 +29,26 @@
         <!-- ============ HERO ============ -->
         <section class="hero">
             <div class="hero-tekst">
-                <!-- FYLL INN: én setning om hvem du er og hva du ser etter -->
-                <h1>Jeg studerer cybersikkerhet, liker å bygge ting og ser etter sommerjobb eller deltidsjobb innen sikkerhet.</h1>
+                <h1>Jeg studerer cybersikkerhet og ser etter sommerjobb eller deltidsjobb innen sikkerhet.</h1>
 
                 <div class="whois" role="group" aria-label="Kort oversikt">
                     <p class="prompt">$ whois nicolai-gravdal-johnsen</p>
                     <dl>
-                        <dt>navn</dt>
+                        <dt>Navn</dt>
                         <dd>Nicolai Gravdal Johnsen</dd>
-                        <dt>studie</dt>
+                        <dt>Studie</dt>
                         <dd>Bachelor i digital infrastruktur og cybersikkerhet, 2. år</dd>
-                        <dt>sted</dt>
+                        <dt>Sted</dt>
                         <dd>Gjøvik, Norge</dd>
-                        <dt>interesser</dt>
+                        <dt>Interesser</dt>
                         <dd>Nettverkssikkerhet, hendelseshåndtering</dd>
-                        <dt>søker</dt>
+                        <dt>Søker</dt>
                         <dd>Sommerjobb 2027 / Deltidsjobb</dd>
-                        <dt>status</dt>
-                        <dd><span class="led" aria-hidden="true"></span>Tilgjengelig for en prat</dd>
                     </dl>
                 </div>
 
                 <p class="hero-knapper">
                     <a class="knapp" href="#kontakt">Ta kontakt</a>
-                    <!-- Legg CV-en din i samme mappe som cv.pdf -->
                     <a class="knapp sekundær" href="cv.pdf">Last ned CV (PDF)</a>
                 </p>
             </div>
@@ -66,7 +61,6 @@
         <!-- ============ OM MEG ============ -->
         <section id="om-meg">
             <h2>Om meg</h2>
-            <!-- FYLL INN: skriv som du snakker. Hvorfor sikkerhet? Hva driver deg? Hva gjør du utenom studiet? -->
             <p>Jeg vokste opp i et hjem der begge foreldrene mine jobber med IT, så interessen kom tidlig. Det var
                 spesielt sikkerhetsbiten som fanget meg: hvordan systemer kan angripes, og hvordan man beskytter dem. Nå
                 går jeg andre året på cybersikkerhet.</p>
@@ -85,18 +79,36 @@
             <h2>Prosjekter</h2>
             <p class="ingress">Ting jeg har bygget og satt opp.</p>
 
-            <!-- Kopier en hel <article> for hvert prosjekt. 2–4 gode prosjekter er bedre enn mange. -->
             <article class="prosjekt">
                 <h3>Formel 1 Simulator i C++</h3>
                 <ul class="tagger" aria-label="Teknologier">
                     <li>C++</li>
                     <li>Objektorientert programmering</li>
-                    <li>Terminal</li>
                 </ul>
                 <p><strong>Hva:</strong> En simulator for Formel 1-løp, skrevet i C++.</p>
                 <p><strong>Lærte:</strong> Lærte om objektorientert programmering i denne perioden, så ble en del
                     prøving og feiling underveis mens jeg opprettet simulatoren.</p>
                 <p class="lenker"><a href="https://github.com/j0hnsen23/F1_Project">Kode på GitHub</a></p>
+            </article>
+            <article class="prosjekt">
+                <h3>Passord generator i JS</h3>
+                <ul class="tagger" aria-label="Teknologier">
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <p><strong>Hva:</strong> En enkel passord generator skrevet i JavaScript.</p>
+                <p><strong>Lærte:</strong> Lærte om html, css og javascript i denne perioden så jeg kunne lage interaktive nettsider.</p>
+                <p class="lenker"><a href="https://github.com/j0hnsen23/Javascript/tree/main/PASSWORD_GENERATOR">Kode på GitHub</a></p>
+            </article>
+            <article class="prosjekt">
+                <h3>TicTacToe i C</h3>
+                <ul class="tagger" aria-label="Teknologier">
+                    <li>C</li>
+                </ul>
+                <p><strong>Hva:</strong> Et enkelt TicTacToe-spill skrevet i C.</p>
+                <p><strong>Lærte:</strong> Lærte om grunnleggende C-programmering og datastrukturer i denne perioden.</p>
+                <p class="lenker"><a href="https://github.com/j0hnsen23/TicTacToe-in-C">Kode på GitHub</a></p>
             </article>
         </section>
 
@@ -106,12 +118,16 @@
             <p class="ingress">Gjennomganger av CTF-oppgaver og øvingsmaskiner. Kun lovlige plattformer og pensjonerte
                 maskiner.</p>
 
-            <!-- Hver <li> er ett innlegg. Lenk til en egen side, f.eks. writeups/navn.html -->
             <ol class="writeups">
                 <li>
                     <time datetime="2026-09">sep. 2026</time>
                     <a href="https://github.com/j0hnsen23/CTF-WriteUps/blob/main/CRYPTO/Reverse_Engineer.md">Reverse
                         Engineer</a>
+                    <span class="plattform">Login CTF</span>
+                </li>
+                <li>
+                    <time datetime="2026-09">sep. 2026</time>
+                    <a href="https://github.com/j0hnsen23/CTF-WriteUps/blob/main/FORENSICS/4-way-traffic.md">4-way traffic</a>
                     <span class="plattform">Login CTF</span>
                 </li>
             </ol>
@@ -176,24 +192,27 @@
 
         <!-- ============ FERDIGHETER ============ -->
         <section id="ferdigheter">
-            <h2>Ferdigheter og sertifiseringer</h2>
+            <h2>Ferdigheter</h2>
             <div class="kolonner">
                 <div>
                     <h3>Teknisk</h3>
                     <ul class="enkel">
-                        <li>Linux og Bash</li>
+                        <li>Linux (Ubuntu) og Windows</li>
                         <li>C og C++</li>
-                        <li>Nettverk (TCP/IP, Wireshark)</li>
+                        <li>Nettverk (TCP/IP, Wireshark, Cisco IOS)</li>
+                        <li>Skripting (Bash,PowerShell)</li>
+                        <li>Verktøy (Git, VS Code)</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Sertifiseringer</h3>
+                    <h3>Kurs</h3>
                     <ul class="enkel">
-                        <!-- Skriv "pågår" for det du jobber mot -->
-                        <li>Sertifisering MÅ FIKSES</li>
-                        <li>Sertifisering (pågår)</li>
+                        <li><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-INSEMVGPKG.pdf">TryHackMe - Cyber Security 101</a></li>
+                        <li><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-ZTGTZIKGS3.pdf">TryHackMe - Pre Security (Legacy)</a></li>
+
                     </ul>
                 </div>
+
                 <div>
                     <h3>Språk</h3>
                     <ul class="enkel">

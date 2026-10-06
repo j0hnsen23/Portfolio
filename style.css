@@ -319,6 +319,7 @@ section {
   list-style: none;
   padding: 0;
   font-family: Consolas, Menlo, monospace;
+  text-align: center;
 }
 
 .kontaktliste li {
