@@ -10,6 +10,7 @@ body {
   font-family: Georgia, serif;
   font-size: 18px;
   line-height: 1.6;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3 {
@@ -324,7 +325,7 @@ section {
 
 .kontaktliste li {
   display: inline-block;
-  margin-right: 30px;
+  margin: 0 15px;
 }
 
 .bunn {
@@ -340,8 +341,25 @@ section {
 /* ---------- Mobil ---------- */
 /* Alt her gjelder bare når skjermen er smalere enn 700px */
 @media (max-width: 700px) {
+  /* Lavere meny, så den ikke tar så mye av skjermen */
+  .topp {
+    padding: 10px 16px;
+  }
+
+  .topp nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  /* Mindre luft rundt seksjonene */
+  section {
+    padding: 40px 16px;
+  }
+
+  /* Toppen av siden */
   .hero {
     flex-direction: column-reverse; /* bildet over teksten */
+    gap: 25px;
   }
 
   .hero h1 {
@@ -353,25 +371,27 @@ section {
     height: 160px;
   }
 
+  /* Whois-boksen: navn og verdi under hverandre */
   .whois dl {
     grid-template-columns: 1fr;
   }
 
-  .topp nav a {
-    margin-left: 0;
-    margin-right: 15px;
+  .whois dd {
+    margin-bottom: 8px;
   }
 
+  /* Status-lyset står vanlig plassert når alt er i én kolonne */
+  .led {
+    margin-left: 0;
+  }
+
+  /* Writeups: dato, tittel og plattform under hverandre */
   .writeups li {
     flex-direction: column;
     gap: 2px;
   }
 
   .plattform {
-    margin-left: 0;
-  }
-  
-  .led{
     margin-left: 0;
   }
 }
