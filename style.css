@@ -1,4 +1,3 @@
-/* ---------- Grunnleggende ---------- */
 * {
   box-sizing: border-box;
 }
@@ -31,10 +30,10 @@ img {
   max-width: 100%;
 }
 
-/* Lenke for tastaturbrukere, vises bare når man tabber til den */
 .skip {
   position: absolute;
   top: -50px;
+  z-index: 20;
 }
 
 .skip:focus {
@@ -45,10 +44,10 @@ img {
   padding: 8px;
 }
 
-/* ---------- Menyen øverst ---------- */
 .topp {
-  position: sticky; 
+  position: sticky;
   top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -71,7 +70,6 @@ img {
   text-decoration: none;
 }
 
-/* ---------- Seksjoner ---------- */
 section {
   max-width: 750px;
   margin: 0 auto;
@@ -79,11 +77,15 @@ section {
   border-top: 1px solid #2c3847;
 }
 
+section,
+.deloverskrift {
+  scroll-margin-top: 80px;
+}
+
 .ingress {
   color: #93a1b2;
 }
 
-/* ---------- Toppen av siden ---------- */
 .hero {
   max-width: 1000px;
   display: flex;
@@ -96,7 +98,6 @@ section {
   font-weight: normal;
 }
 
-/* Den første boksen */
 .whois {
   background: #19222e;
   border: 1px solid #2c3847;
@@ -112,7 +113,6 @@ section {
   margin-top: 0;
 }
 
-/* Legger navn og verdi side om side, som en tabell */
 .whois dl {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -127,7 +127,6 @@ section {
   margin: 0;
 }
 
-/* Det lille grønne "status-lyset" */
 .led {
   display: inline-block;
   width: 10px;
@@ -138,7 +137,6 @@ section {
   background: #4fc79f;
 }
 
-/* Knapper */
 .knapp {
   display: inline-block;
   margin: 25px 10px 0 0;
@@ -162,13 +160,12 @@ section {
   color: #dce3ea;
 }
 
-/* Bildet */
 .portrett {
   width: 250px;
   height: 310px;
   object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0; /* hindrer at bildet blir klemt */
+  flex-shrink: 0;
 }
 
 .plassholder {
@@ -182,7 +179,6 @@ section {
   color: #2c3847;
 }
 
-/* ---------- Prosjekter ---------- */
 .prosjekt {
   padding-left: 20px;
   margin-bottom: 40px;
@@ -199,7 +195,6 @@ section {
   color: #93a1b2;
 }
 
-/* Små "merkelapper" for teknologier */
 .tagger {
   list-style: none;
   padding: 0;
@@ -216,7 +211,6 @@ section {
   color: #93a1b2;
 }
 
-/* ---------- Writeups ---------- */
 .writeups {
   list-style: none;
   padding: 0;
@@ -240,7 +234,6 @@ section {
   margin-left: auto;
 }
 
-/* ---------- Tidslinje ---------- */
 .tidslinje {
   list-style: none;
   padding: 0;
@@ -253,7 +246,6 @@ section {
   margin-bottom: 30px;
 }
 
-/* Prikken på streken */
 .tidslinje li::before {
   content: "";
   position: absolute;
@@ -292,8 +284,6 @@ section {
   border-top: none;
 }
 
-
-/* ---------- Ferdigheter ---------- */
 .kolonner {
   display: flex;
   flex-wrap: wrap;
@@ -315,7 +305,6 @@ section {
   border-bottom: 1px solid #2c3847;
 }
 
-/* ---------- Kontakt og bunn ---------- */
 .kontaktliste {
   list-style: none;
   padding: 0;
@@ -338,10 +327,7 @@ section {
   text-align: center;
 }
 
-/* ---------- Mobil ---------- */
-/* Alt her gjelder bare når skjermen er smalere enn 700px */
 @media (max-width: 700px) {
-  /* Lavere meny, så den ikke tar så mye av skjermen */
   .topp {
     padding: 10px 16px;
   }
@@ -351,14 +337,17 @@ section {
     margin-right: 15px;
   }
 
-  /* Mindre luft rundt seksjonene */
+  section,
+  .deloverskrift {
+    scroll-margin-top: 110px;
+  }
+
   section {
     padding: 40px 16px;
   }
 
-  /* Toppen av siden */
   .hero {
-    flex-direction: column-reverse; /* bildet over teksten */
+    flex-direction: column-reverse;
     gap: 25px;
   }
 
@@ -371,7 +360,6 @@ section {
     height: 160px;
   }
 
-  /* Whois-boksen: navn og verdi under hverandre */
   .whois dl {
     grid-template-columns: 1fr;
   }
@@ -380,12 +368,10 @@ section {
     margin-bottom: 8px;
   }
 
-  /* Status-lyset står vanlig plassert når alt er i én kolonne */
   .led {
     margin-left: 0;
   }
 
-  /* Writeups: dato, tittel og plattform under hverandre */
   .writeups li {
     flex-direction: column;
     gap: 2px;
