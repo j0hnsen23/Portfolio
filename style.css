@@ -131,6 +131,7 @@ section {
   display: inline-block;
   width: 10px;
   height: 10px;
+  margin-left: -27px;
   margin-right: 8px;
   border-radius: 50%;
   background: #4fc79f;
@@ -290,7 +291,6 @@ section {
   border-top: none;
 }
 
-/* ---------- Ferdigheter ---------- */
 
 /* ---------- Ferdigheter ---------- */
 .kolonner {
@@ -368,6 +368,10 @@ section {
   }
 
   .plattform {
+    margin-left: 0;
+  }
+  
+  .led{
     margin-left: 0;
   }
 }
