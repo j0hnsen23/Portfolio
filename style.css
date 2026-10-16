@@ -12,7 +12,9 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Consolas, Menlo, monospace;
   margin: 0 0 15px;
 }
@@ -285,14 +287,13 @@ section,
 }
 
 .kolonner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.kolonner > div {
-  flex: 1;
-  min-width: 180px;
+.kolonner>div {
+  min-width: 0;
 }
 
 .enkel {
@@ -379,5 +380,9 @@ section,
 
   .plattform {
     margin-left: 0;
+  }
+
+  .kolonner {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
